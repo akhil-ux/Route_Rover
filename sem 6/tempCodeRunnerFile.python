@@ -1,0 +1,16 @@
+class FiveDivisionError(ArithmeticError):
+    pass
+l1=[]
+l2=[]
+
+for i in range(11):
+    if 1%5==0:
+        try:
+            raise FiveDivisionError("divide by five")
+        except FiveDivisionError:
+            l1.append(i)
+        finally:
+            pass
+    else:
+        l2.append(i)
+print(l1,l2)
